@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ffeef8, #ffc1d6); /* Gradien pastel pink */
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.5s ease-in-out;
+}
+
+header {
+    background: linear-gradient(to right, #ffa0b6, #ff7e93); /* Gradien untuk header */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out, colorPulse 5s infinite alternate ease-in-out; /* Tambahkan animasi warna */
+}
+
+@keyframes colorPulse {
+    0% {
+        color: #ffa0b6;
+    }
+    50% {
+        color: #ff7e93;
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #fff;
+    color: #ffa0b6;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background: #fff; /* Warna latar belakang putih untuk konten */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffa0b6;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: linear-gradient(to right, #ffa0b6, #ff7e93); /* Gradien untuk footer */
+    color: #fff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.icon {
+    font-size: 2rem;
+    margin: 10px;
+    color: #ffa0b6;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+    color: #ff7e93;
+    transform: scale(1.3) rotate(10deg);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
