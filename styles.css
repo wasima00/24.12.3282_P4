@@ -1,26 +1,35 @@
+*{
+    scroll-behavior: smooth
+}
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #ffeef8, #ffc1d6); /* Gradien pastel pink */
-    color: #333;
+    background: linear-gradient(to right, #ffeef8, #ffc1d6); 
     line-height: 1.6;
     transition: background 0.5s ease-in-out;
 }
 
 header {
-    background: linear-gradient(to right, #ffa0b6, #ff7e93); /* Gradien untuk header */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to right, #000000, #000000); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease-in-out;
+}
+
+header h2 {
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 15rem;
+    line-height: 2;
     margin: 0;
-    animation: fadeIn 2s ease-in-out, colorPulse 5s infinite alternate ease-in-out; /* Tambahkan animasi warna */
+    animation: fadeIn 2s ease-in-out, colorPulse 5s infinite alternate ease-in-out; 
 }
 
 @keyframes colorPulse {
@@ -28,7 +37,7 @@ header h1 {
         color: #ffa0b6;
     }
     50% {
-        color: #ff7e93;
+        color: #ffa0b6;
     }
     100% {
         color: #fff;
@@ -37,15 +46,14 @@ header h1 {
 
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
     display: flex;
-    justify-content: center;
     gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffa0b6;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
@@ -63,8 +71,7 @@ nav ul li a:hover {
 section {
     padding: 20px;
     margin: 20px auto;
-    background: #fff; /* Warna latar belakang putih untuk konten */
-    border-radius: 15px;
+    background: #fff; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     max-width: 800px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -86,7 +93,7 @@ section h2 {
 footer {
     text-align: center;
     padding: 15px 0;
-    background: linear-gradient(to right, #ffa0b6, #ff7e93); /* Gradien untuk footer */
+    background: linear-gradient(to right, #ffa0b6, #ff7e93); 
     color: #fff;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -98,11 +105,33 @@ footer p {
     animation: fadeIn 2s ease-in-out;
 }
 
+.logo-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffa0b6;
+    margin-right: auto;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-image {
+    width: 300px;
+    height: 200px;
+    border: 5px solid #ccc;
+    border-radius: 8px;
+    object-fit: cover;
+    
+}
+
 .icon {
     font-size: 2rem;
     margin: 10px;
-    color: #ffa0b6;
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: #000000;
+    transition: color 0.6s ease, transform 0.3s ease;
 }
 
 .icon:hover {
