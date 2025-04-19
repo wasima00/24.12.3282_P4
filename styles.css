@@ -2,10 +2,10 @@
     scroll-behavior: smooth
 }
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #ffeef8, #ffc1d6); 
+    background: linear-gradient(to right, #000000, #000000); 
     line-height: 1.6;
     transition: background 0.5s ease-in-out;
 }
@@ -26,8 +26,8 @@ header h2 {
 }
 
 header h1 {
-    font-size: 15rem;
-    line-height: 2;
+    font-size: 14rem;
+    line-height: 1.8;
     margin: 0;
     animation: fadeIn 2s ease-in-out, colorPulse 5s infinite alternate ease-in-out; 
 }
@@ -70,10 +70,13 @@ nav ul li a:hover {
 
 section {
     padding: 20px;
-    margin: 20px auto;
-    background: #fff; 
+   margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background: #ffa0b6; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    max-width: 800px;
+    max-width: 100%;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -82,14 +85,30 @@ section:hover {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-section h2 {
+section h2 { 
     font-size: 2rem;
     margin-bottom: 10px;
-    color: #ffa0b6;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-
+section p {
+    font-size: 1.5rem;
+    color: #000000;
+    line-height: 1.5;
+}
+section ul {
+    list-style: disc;
+    padding-left: 25px;
+    margin: 0;
+}
+section ul li {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    color: #000000;
+    position: relative;
+    padding-left: 20px;
+}
 footer {
     text-align: center;
     padding: 15px 0;
@@ -101,7 +120,7 @@ footer {
 
 footer p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -112,6 +131,42 @@ footer p {
     margin-right: auto;
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Jarak antara h1 dan container */
+    margin-top: 20px;
+}
+
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 200px;
+  }
+
+  .box-pink {
+    position: absolute;
+    width: 350px; /* Sesuaikan ukuran box */
+    height: 250px; /* Sesuaikan ukuran box */
+    background-color: pink;
+    top: 50px;
+    right: 300px;
+    z-index: 1;
+}
+
+
+.box-white {
+    position: absolute;
+    width: 350px; 
+    height: 250px; /* Sesuaikan ukuran box */
+    background-color: white;
+    top: 70px;
+    right: 200px;
+    z-index: 2;
+}
+  
 .about-container {
     display: flex;
     align-items: center;
@@ -121,9 +176,8 @@ footer p {
 .profile-image {
     width: 300px;
     height: 200px;
-    border: 5px solid #ccc;
-    border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
+    margin-bottom: 5px;
     
 }
 
@@ -145,5 +199,54 @@ footer p {
     }
     to {
         opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%; /* Sesuaikan lebar container */
+        height: auto; /* Sesuaikan tinggi container */
+    }
+
+    .box-pink, .box-white {
+        position: relative; /* Ubah posisi menjadi relatif */
+        width: 100%; /* Sesuaikan lebar box */
+        height: 150px; /* Sesuaikan tinggi box */
+        margin: 10px 0; /* Tambahkan margin antar box */
+    }
+
+    .header-content {
+        flex-direction: column; /* Susun elemen secara vertikal */
+        gap: 10px; /* Kurangi jarak antar elemen */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Kurangi ukuran font untuk layar kecil */
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Lebar penuh untuk layar kecil */
+        height: auto;
+    }
+
+    .box-pink, .box-white {
+        width: 100%; /* Lebar penuh */
+        height: 120px; /* Tinggi lebih kecil */
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Ukuran font lebih kecil */
+    }
+
+    nav ul {
+        flex-direction: column; /* Navigasi vertikal */
+        gap: 10px;
     }
 }
