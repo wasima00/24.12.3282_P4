@@ -148,23 +148,33 @@ footer p {
 
   .box-pink {
     position: absolute;
-    width: 350px; /* Sesuaikan ukuran box */
-    height: 250px; /* Sesuaikan ukuran box */
+    width: 450px; 
+    height: 250px; 
     background-color: pink;
     top: 50px;
     right: 300px;
     z-index: 1;
+    border-radius: 10px;
+    display: flex;
 }
 
 
 .box-white {
     position: absolute;
-    width: 350px; 
-    height: 250px; /* Sesuaikan ukuran box */
+    width: 450px; 
+    height: 250px; 
     background-color: white;
     top: 70px;
     right: 200px;
     z-index: 2;
+    border-radius: 10px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+
+    font-size: 1.2rem; 
+    color: #ff7e93;
 }
   
 .about-container {
@@ -180,7 +190,93 @@ footer p {
     margin-bottom: 5px;
     
 }
+.gallery-wrapper {
+    background-color: #ffa0b6;
+    box-sizing: border-box;
+    height: auto; 
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10px; 
+}
 
+.gallery-scroll {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 10px;
+    padding-bottom: 10px;
+    align-items: center; /* Pastikan gambar sejajar secara vertikal */
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    align-items: center; /* Pastikan gambar sejajar secara vertikal */
+}
+
+.item {
+    flex: 0 0 auto; /* Pastikan elemen tidak menyusut */
+    padding: 7px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.item:hover {
+    transform: scale(1.05); 
+}
+
+.item img {
+    display: block;
+    width: auto; /* Biarkan lebar menyesuaikan gambar */
+    height: auto; /* Biarkan tinggi menyesuaikan gambar */
+    max-width: 100%; /* Pastikan gambar tidak melebihi lebar container */
+    max-height: 100%; /* Pastikan gambar tidak melebihi tinggi container */
+    object-fit: contain; /* Pastikan gambar tidak terpotong */
+    border-radius: 8px;
+}
+
+.item:first-child img {
+    width: auto; /* Biarkan lebar menyesuaikan */
+    height: 320px; /* Tetapkan tinggi untuk potret */
+    object-fit: cover; /* Pastikan gambar memenuhi area tanpa terdistorsi */
+    border-radius: 8px; /* Tambahkan sudut melengkung */
+}
+.item:nth-child(2) img {
+    width: auto; /* Biarkan lebar menyesuaikan */
+    height: 320px; /* Tetapkan tinggi untuk potret */
+    object-fit: cover; /* Pastikan gambar memenuhi area tanpa terdistorsi */
+    border-radius: 8px; /* Tambahkan sudut melengkung */
+}
+.item:nth-child(3) img {
+    width: auto; /* Biarkan lebar menyesuaikan */
+    height: 320px; /* Tetapkan tinggi untuk potret */
+    object-fit: cover; /* Pastikan gambar memenuhi area tanpa terdistorsi */
+    border-radius: 8px; /* Tambahkan sudut melengkung */
+}
+
+@media (max-width: 768px) {
+    .gallery-wrapper {
+        padding: 5px;
+    }
+
+    .item {
+        width: 120px; 
+        height: 80px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .gallery-wrapper {
+        padding: 5px;
+    }
+
+    .item {
+        width: 100px; 
+        height: 70px; 
+    }
+}
 .icon {
     font-size: 2rem;
     margin: 10px;
@@ -204,35 +300,35 @@ footer p {
 
 @media (max-width: 768px) {
     .container {
-        width: 100%; /* Sesuaikan lebar container */
-        height: auto; /* Sesuaikan tinggi container */
+        width: 100%; 
+        height: auto; 
     }
 
     .box-pink, .box-white {
-        position: relative; /* Ubah posisi menjadi relatif */
-        width: 100%; /* Sesuaikan lebar box */
-        height: 150px; /* Sesuaikan tinggi box */
-        margin: 10px 0; /* Tambahkan margin antar box */
+        position: relative; 
+        width: 100%; 
+        height: 150px; 
+        margin: 10px 0; 
     }
 
     .header-content {
-        flex-direction: column; /* Susun elemen secara vertikal */
-        gap: 10px; /* Kurangi jarak antar elemen */
+        flex-direction: column; 
+        gap: 10px; 
     }
 
     header h1 {
-        font-size: 2rem; /* Kurangi ukuran font untuk layar kecil */
+        font-size: 2rem; 
     }
 }
 @media (max-width: 480px) {
     .container {
-        width: 100%; /* Lebar penuh untuk layar kecil */
+        width: 100%; 
         height: auto;
     }
 
     .box-pink, .box-white {
-        width: 100%; /* Lebar penuh */
-        height: 120px; /* Tinggi lebih kecil */
+        width: 100%; 
+        height: 120px; 
     }
 
     .header-content {
@@ -242,11 +338,11 @@ footer p {
     }
 
     header h1 {
-        font-size: 1.5rem; /* Ukuran font lebih kecil */
+        font-size: 1.5rem;
     }
 
     nav ul {
-        flex-direction: column; /* Navigasi vertikal */
+        flex-direction: column; 
         gap: 10px;
     }
 }
